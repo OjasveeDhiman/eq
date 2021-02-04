@@ -76,9 +76,6 @@ const Poi = () => {
     const map = useRef(null);
     const onDataLoaded = (jsonData) => {
 
-        // const brushes = [
-        //     "rgba(252, 32, 32, 0.4)",  // semi-transparent red
-        // ];
         const sizeScale = new IgrSizeScale({});
         sizeScale.minimumValue = 15;
         sizeScale.maximumValue = 60;
@@ -91,8 +88,7 @@ const Poi = () => {
         symbolSeries.markerType = MarkerType.Hidden;
         symbolSeries.radiusScale = sizeScale;
         symbolSeries.fillScale = brushScale;        
-        symbolSeries.fillMemberPath = "poi_id";
-        // symbolSeries.radiusMemberPath = "poi_id";
+        symbolSeries.fillMemberPath = "poi_id"; 
         symbolSeries.latitudeMemberPath = "lat";
         symbolSeries.longitudeMemberPath = "lon";
         symbolSeries.markerOutline = "rgba(252, 32, 32)";

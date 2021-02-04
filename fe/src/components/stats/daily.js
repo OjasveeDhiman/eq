@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
-import {Line, options, Pie, Radar, Polar} from 'react-chartjs-2';
+import {options, Radar} from 'react-chartjs-2';
 
 const Sdaily = () => {
     const [data, setData] = useState([]);
